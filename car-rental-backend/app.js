@@ -24,7 +24,7 @@ app.use('/cars',carsRouter);
  app.use('/auth',authRouter );
 app.use('/booking',bookingRouter );
  
-app.get('/', (req,res)=> {
+app.use('/', (req,res)=> {
   res.json('Hello')
 })
 // table relations
