@@ -7,7 +7,11 @@ const Cars = require('./model/cars');
 const Booking = require('./model/booking');
 
 require('dotenv').config(); 
-app.use(cors());
+app.use(cors({
+  origin: [''],
+   methods: ['POST' , 'GET', 'DELETE' , 'PUT'],
+   credentials: true
+  }));
 app.use(express.json());
 
 // routes
