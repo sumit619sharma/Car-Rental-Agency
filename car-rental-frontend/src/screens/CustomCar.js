@@ -14,7 +14,7 @@ function CustomCar() {
 
   const getAllCars = async () => {
     try {
-        let resp =await  axios.get(`http://localhost:5000/cars`,
+        let resp =await  axios.get(`https://car-rental-agency-server.vercel.app/cars`,
           { headers: {
              "Content-Type": "application/json",
              Authorization: user.token,
@@ -33,7 +33,7 @@ function CustomCar() {
        
         const carId = editedCar.id;
         try {
-            let resp =await  axios.put(`http://localhost:5000/cars/${carId}`, carData,
+            let resp =await  axios.put(`https://car-rental-agency-server.vercel.app/cars/${carId}`, carData,
               { headers: {
                  "Content-Type": "application/json",
                  Authorization: user.token,
@@ -48,7 +48,7 @@ function CustomCar() {
     }
     
     try {
-   let resp =await  axios.post(`http://localhost:5000/cars`, carData,
+   let resp =await  axios.post(`https://car-rental-agency-server.vercel.app/cars`, carData,
      { headers: {
         "Content-Type": "application/json",
         Authorization: user.token,
@@ -62,7 +62,7 @@ function CustomCar() {
 
   const handleCarDelete =async (carIdToDelete) => {
     try {
-        let resp =await  axios.delete(`http://localhost:5000/cars/${carIdToDelete}`,
+        let resp =await  axios.delete(`https://car-rental-agency-server.vercel.app/cars/${carIdToDelete}`,
           { headers: {
              "Content-Type": "application/json",
              Authorization: user.token,

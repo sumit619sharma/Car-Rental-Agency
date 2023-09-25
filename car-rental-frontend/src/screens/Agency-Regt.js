@@ -19,7 +19,7 @@ const navigate =  useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    await axios.post('http://localhost:5000/auth/agent',adminData)
+    await axios.post('https://car-rental-agency-server.vercel.app/auth/agent',adminData)
     navigate('/login');
    } catch (error) {
     

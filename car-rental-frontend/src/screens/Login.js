@@ -22,7 +22,7 @@ function Login() {
     
     
 try {
-   const resp = await axios.post('http://localhost:5000/auth/login',formData)
+   const resp = await axios.post('https://car-rental-agency-server.vercel.app/auth/login',formData)
   if(resp.status!==200){
     return;
   }

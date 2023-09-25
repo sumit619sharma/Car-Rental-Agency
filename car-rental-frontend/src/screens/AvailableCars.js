@@ -15,7 +15,7 @@ function AvailableCars() {
 
   const getAllCars = async () => {
     try {
-        let resp =await  axios.get(`http://localhost:5000/cars`,
+        let resp =await  axios.get(`https://car-rental-agency-server.vercel.app/cars`,
            )
        const data = await resp.data;
           setCars(data);
@@ -34,7 +34,7 @@ function AvailableCars() {
         rentDays,
       };
       try {
-        let resp =await  axios.post(`http://localhost:5000/booking`, booking,
+        let resp =await  axios.post(`https://car-rental-agency-server.vercel.app/booking`, booking,
           { headers: {
              "Content-Type": "application/json",
              Authorization: user.token,

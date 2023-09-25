@@ -7,7 +7,7 @@ const BookedCar= () => {
   const user = JSON.parse(localStorage.getItem('user')) || null  ;
    const getAllBookedCars =async () => {
     try {
-      let resp =await  axios.get(`http://localhost:5000/booking`,
+      let resp =await  axios.get(`https://car-rental-agency-server.vercel.app/booking`,
         { headers: {
            "Content-Type": "application/json",
            Authorization: user.token,

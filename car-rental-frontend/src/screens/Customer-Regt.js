@@ -21,7 +21,7 @@ function CustomerRegistration() {
     e.preventDefault();
     
 try {
-  const resp = await axios.post('http://localhost:5000/auth/customer',userData)
+  const resp = await axios.post('https://car-rental-agency-server.vercel.app/auth/customer',userData)
   navigate('/login');
 } catch (error) {
   
