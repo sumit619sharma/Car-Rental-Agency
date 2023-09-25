@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js"
+  },
+
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
