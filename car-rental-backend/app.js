@@ -24,6 +24,9 @@ app.use('/cars',carsRouter);
  app.use('/auth',authRouter );
 app.use('/booking',bookingRouter );
  
+app.get('/', (req,res)=> {
+  res.json('Hello')
+})
 // table relations
 User.hasMany(Cars);
 Cars.belongsTo(User);
