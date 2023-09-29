@@ -28,7 +28,8 @@ app.get('/favicon.ico', (req, res , next) => {
 
   // Send a 204 No Content response
   // res.status(204).end();
-next();
+res.send('hello there');
+  //next();
 }); 
 
 
