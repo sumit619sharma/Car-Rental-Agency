@@ -15,22 +15,22 @@ const authRouter = require('./routes/auth');
 const carsRouter = require('./routes/cars');
 const bookingRouter = require('./routes/booking');
 
-app.get('/favicon.ico', (req, res , next) => {
-  // Customize the response for /favicon.ico here
-  // For example, you can send a custom favicon file or a 204 No Content response
-  // to indicate that there is no favicon available.
-  // Replace the following with your desired behavior:
+// app.get('/favicon.ico', (req, res , next) => {
+//   // Customize the response for /favicon.ico here
+//   // For example, you can send a custom favicon file or a 204 No Content response
+//   // to indicate that there is no favicon available.
+//   // Replace the following with your desired behavior:
 
-  // Send a custom favicon file
-  // res.sendFile(__dirname + '/path/to/your/favicon.ico');
+//   // Send a custom favicon file
+//   // res.sendFile(__dirname + '/path/to/your/favicon.ico');
 
-  // OR
+//   // OR
 
-  // Send a 204 No Content response
-  // res.status(204).end();
-res.send('hello there');
-  //next();
-}); 
+//   // Send a 204 No Content response
+//   // res.status(204).end();
+// res.send('hello there');
+//   //next();
+// }); 
 
 
 app.use( (req,res)=> {
