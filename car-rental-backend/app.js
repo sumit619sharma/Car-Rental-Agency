@@ -33,7 +33,7 @@ const bookingRouter = require('./routes/booking');
 // }); 
 
 
-app.use( (req,res)=> {
+app.get('/', (req,res)=> {
   res.send('Hello')
 })
 
