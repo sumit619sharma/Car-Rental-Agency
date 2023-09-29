@@ -14,15 +14,16 @@ app.use(express.json());
 const authRouter = require('./routes/auth');
 const carsRouter = require('./routes/cars');
 const bookingRouter = require('./routes/booking');
+app.use( (req,res)=> {
+  res.send('Hello')
+})
 
 // api endpoints
 app.use('/cars',carsRouter);
  app.use('/auth',authRouter );
 app.use('/booking',bookingRouter );
  
-app.use('/', (req,res)=> {
-  res.json('Hello')
-})
+
 // table relations
 User.hasMany(Cars);
 Cars.belongsTo(User);
