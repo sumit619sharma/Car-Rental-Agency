@@ -7,11 +7,7 @@ const Cars = require('./model/cars');
 const Booking = require('./model/booking');
 
 require('dotenv').config(); 
-app.use(cors({
-  origin: ['https://car-rental-agency-ten.vercel.app'],
-   methods: ['POST' , 'GET', 'DELETE' , 'PUT'],
-   credentials: true
-  }));
+app.use(cors());
 app.use(express.json());
 
 // routes
