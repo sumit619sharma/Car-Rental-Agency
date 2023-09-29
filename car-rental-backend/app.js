@@ -15,11 +15,6 @@ const authRouter = require('./routes/auth');
 const carsRouter = require('./routes/cars');
 const bookingRouter = require('./routes/booking');
 
-// api endpoints
-app.use('/cars',carsRouter);
- app.use('/auth',authRouter );
-app.use('/booking',bookingRouter );
-
 app.get('/favicon.ico', (req, res , next) => {
   // Customize the response for /favicon.ico here
   // For example, you can send a custom favicon file or a 204 No Content response
@@ -34,11 +29,21 @@ app.get('/favicon.ico', (req, res , next) => {
   // Send a 204 No Content response
   // res.status(204).end();
 next();
-});
+}); 
 
-app.use('/', (req,res)=> {
-  res.json('Hello')
+
+app.use( (req,res)=> {
+  res.send('Hello')
 })
+
+// api endpoints
+app.use('/cars',carsRouter);
+ app.use('/auth',authRouter );
+app.use('/booking',bookingRouter );
+
+
+
+
 // table relations
 User.hasMany(Cars);
 Cars.belongsTo(User);
