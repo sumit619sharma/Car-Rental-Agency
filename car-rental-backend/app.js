@@ -33,8 +33,8 @@ const bookingRouter = require('./routes/booking');
 // }); 
 
 
-app.get('/', (req,res)=> {
-  res.send('Hello')
+app.use( (err , req,res)=> {
+  res.send(err);
 })
 
 // api endpoints
